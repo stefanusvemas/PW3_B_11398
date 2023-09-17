@@ -121,7 +121,7 @@ $gambar = [
             </footer>
         </div>
     </main>
-    <script src="./assets/css/bootstrap.min.css"></script>
+    <script src="./assets/js/bootstrap.min.js"></script>
     <script src="./assets/js/home-nav.js"></script>
 </body>
 
