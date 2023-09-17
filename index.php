@@ -18,19 +18,21 @@ $gambar = [
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo $detail['page_title']; ?></title>
-    
-    <link rel="stylesheet" href="./assets/css/bootstrap.min.css"/>
+
+    <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
 
     <link rel="stylesheet" href="https://fonts.googleapis.com">
     <link rel="stylesheet" href="https://fonts.gstatic.com" crossorigin>
     <link href="./assets/css/poppins.min.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="./assets/css/style.css"/>
+    <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
+
 <body>
     <header class="fixed-top" id="navbar">
         <nav class="container nav-top py-2">
@@ -48,6 +50,32 @@ $gambar = [
             </ul>
         </nav>
     </header>
-    
+
+    <main>
+        <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <?php foreach ($gambar as $i => $gbr) { ?>
+                    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="<?php echo $i; ?>" class="<?php echo $i === 0 ? 'active' : ''; ?>" aria-label="Slide <?php echo $i + 1; ?>"></button>
+                <?php } ?>
+            </div>
+            <div class="carousel-inner">
+                <?php foreach ($gambar as $i => $gbr) { ?>
+                    <div class="carousel-item <?php echo $i === 0 ? "active" : ""; ?>">
+                        <img src="<?php echo $gbr; ?>" class="carousel-img" role="img" aria-label="Gambar ke-<?php echo ($i + 1); ?>" focusable="false">
+                    </div>
+                <?php } ?>
+            </div>
+
+            <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visuallyy-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </main>
 </body>
+
 </html>
