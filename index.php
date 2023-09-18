@@ -46,9 +46,9 @@ $gambar = [
                 </div>
             </a>
 
-            <ul class="nav nav0pills">
+            <ul class="nav nav-pills">
                 <li class="nav-item"><a href="#" class="nav-link active" area-current="page">Home</a></li>
-                <li class="nav-item"><a href="#" class="nav-link text-bg-success">Admin Login</a></li>
+                <li class="nav-item"><a href="./login.php" class="nav-link text-bg-success">Admin Login</a></li>
             </ul>
         </nav>
     </header>
