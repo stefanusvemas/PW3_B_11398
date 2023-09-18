@@ -52,7 +52,7 @@ $detail = [
         </nav>
     </header>
 
-    <main style="padding-top: 84px;" class="container">
+    <main style="padding-top: 84px; margin-bottom: 20px;" class="container">
         <h1 class="text-center mt-5 display-4">Welcome Admin</h1>
         <p class="text-center lead">Untuk memastikan identitas, silahkan isi form berikut</p>
 
