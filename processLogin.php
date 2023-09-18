@@ -39,7 +39,7 @@ if (isset($_POST["mencoba_login"])) {
     $_SESSION["user"] = [
         "username" => $username,
         "password" => $password,
-        "bukti_ngator" => $alamatFile,
+        "bukti_ngantor" => $alamatFile,
 
         "login_at" => date("Y-m-d H:i:s")
     ];
