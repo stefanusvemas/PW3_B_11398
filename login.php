@@ -67,12 +67,10 @@ $detail = [
         <hr class="featurette-divider" />
         <form action="./processLogin.php" method="POST" id="formAuth" enctype="multipart/form-data">
 
-            <!-- https://getbootstrap.com -->
             <div class="alert alert-info mb-4 text-center" role="alert">
                 <strong>Info!</strong>Username dan Password bebas, yang penting diisi.
             </div>
 
-            <!-- penggunaan $_SESSION -->
             <?php if (isset($_SESSION["error"])) { ?>
                 <div class="alert alert-danger mb-4 text-center" role="alert">
                     <strong>Error!</strong> <? echo $_SESSION["error"]; ?>
@@ -81,7 +79,6 @@ $detail = [
                 unset($_SESSION["error"]);
             } ?>
 
-            <!-- https://getbootstrap.com -->
             <div class="form-floating mb-4">
                 <input type="text" class="form-control" name="username" id="inputUsername" placeholder="Username">
                 <label for="inputUsername">Username</label>
@@ -91,22 +88,19 @@ $detail = [
                 <label for="inputPassword">Password</label>
             </div>
 
-            <!-- https://getbootstrap.com -->
             <div>
                 <label for="inputFile" class="form-label d-block text-center">Bukti sedang ngantor:</label>
-                <input type="file" class="form-control" id="inputFile" accept=".jpg,.jpeg,.png name" name="bukti_ngantor" />
+                <input type="file" class="form-control" id="inputFile" accept=".jpg,.jpeg,.png" name="bukti_ngantor" />
 
             </div>
 
             <div>
                 <button type="submit" class="btn btn-primary w-100 fw-bold">Login</button>
 
-                <!-- kita mengirimkan -->
                 <input type="hidden" name="mencoba_login" value="1">
             </div>
         </form>
     </main>
-    <!-- Bootstrap 5.3 JS -->
     <script src="./assets/js/bootstrap.min.js"></script>
 </body>
 
