@@ -25,7 +25,7 @@ $detail = [
     <link rel="icon" href="<?php echo $detail["logo"]; ?>" type="image/x-icon" />
 
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
-
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="./assets/css/poppins.min.css" rel="stylesheet">
@@ -79,8 +79,14 @@ $detail = [
                 </div>
             </div>
         </div>
+        
+        <h1 class="mt-5 mb-3 border-bottom fw-bold">Daftar Layanan</h1>
+        <p>Grand Atma memiliki <strong>0</strong> fasilitas dan layanan yang dapat digunakan customer.</p>
+        <button type="button" class="btn btn-success"><i class="fa-regular fa-square-plus"></i> Tambah Layanan</button>
+        
     </main>
     <script src="./assets/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/098cbe1db3.js" crossorigin="anonymous"></script>
 </body>
 
 </html>
