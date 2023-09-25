@@ -34,6 +34,4 @@ if(isset($_POST["simpanLayanan"])){
     $_SESSION["alertSimpan"] = "Berhasil menyimpan data " . $namaLayanan;
     header("Location: ./dashboard.php");
 }
-
-
 ?>

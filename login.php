@@ -42,7 +42,7 @@ $detail = [
 </head>
 
 <body>
-<header class="fixed-top scrolled" id="navbar">
+    <header class="fixed-top scrolled" id="navbar">
         <nav class="container nav-top py-2">
             <a href="./" class="rounded bg-white py-2 px-3 d-flex align-items-center nav-home-btn">
                 <img src="<?php echo $detail["logo"]; ?>" class="crown-logo" />

@@ -17,8 +17,6 @@ if(!isset($_SESSION["layanan"])) {
     $_SESSION["layanan"] = [];
 }
 
-
-
 ?>
 
 <!DOCTYPE html>
