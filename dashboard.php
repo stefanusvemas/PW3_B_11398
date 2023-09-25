@@ -131,7 +131,7 @@ if(!isset($_SESSION["layanan"])) {
                                     </strong></p>
                             </div>
                             <a href="./processHapusLayanan.php?indexLayanan=<?php echo $index; ?>"
-                                class="btn btn-danger">Hapus</a>
+                                class="btn btn-danger"><i class="fa-regular fa-trash-can"></i> Hapus</a>
                         </div>
                     </div>
                 </div>
