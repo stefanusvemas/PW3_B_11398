@@ -12,6 +12,13 @@ $detail = [
     "page_title" => "Admin Panel - Grand Atma Hotel & Resort",
     "logo" => "./assets/images/crown.png"
 ];
+
+if(!isset($_SESSION["layanan"])) {
+    $_SESSION["layanan"] = [];
+}
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -62,6 +69,23 @@ $detail = [
 
     <main style="padding-top: 84px;" class="container">
         <h1 class="mt-5 mb-3 border-bottom fw-bold">Dashboard</h1>
+
+        <!-- Alert Berhasil Simpan -->
+        <?php if(isset($_SESSION["alertSimpan"])) { ?>
+            <div class="alert alert-success" role="alert">
+                <strong>Berhasil!</strong> <?php echo $_SESSION["alertSimpan"] ?>
+            </div>
+            <?php $_SESSION["alertSimpan"] = null; ?>
+        <?php } ?>
+        
+        <!-- Alert Berhasil Delete -->
+        <?php if(isset($_SESSION["alertHapus"])) { ?>
+            <div class="alert alert-success" role="alert">
+                <strong>Berhasil!</strong> <?php echo $_SESSION["alertHapus"] ?>
+            </div>
+            <?php $_SESSION["alertHapus"] = null; ?>
+        <?php } ?>
+
         <div class="row">
             <div class="col-lg-10">
                 <div class="card card-body h-100 justify-content-center">
@@ -81,8 +105,38 @@ $detail = [
         </div>
         
         <h1 class="mt-5 mb-3 border-bottom fw-bold">Daftar Layanan</h1>
-        <p>Grand Atma memiliki <strong>0</strong> fasilitas dan layanan yang dapat digunakan customer.</p>
-        <button type="button" class="btn btn-success"><i class="fa-regular fa-square-plus"></i> Tambah Layanan</button>
+        <p>Grand Atma memiliki <strong><?php echo count($_SESSION["layanan"]) ?></strong> fasilitas dan layanan yang dapat digunakan customer.</p>
+        <a href="./tambahLayanan.php" class="btn btn-success"><i class="fa-regular fa-square-plus"></i> Tambah Layanan</a>
+
+        <?php foreach ($_SESSION["layanan"] as $index => $layanan): ?>
+            <div class="mt-3">
+                <div class="w-100 p-3 border rounded">
+                    <div class="d-flex gap-3">
+                        <img src="./assets/images/featurette-2.jpeg" class="card-img-top" alt="serviceImage"
+                            style="width: 250px; border-radius: 10px;">
+                        <div style="width: 100%;">
+                            <h4>
+                                <?php echo $layanan['namaLayanan'] ?>
+                            </h4>
+                            <p>
+                                <?php echo $layanan['deskripsiLayanan'] ?>
+                            </p>
+                            <hr>
+                            <div class="d-flex gap-4">
+                                <p>Satuan: <strong>
+                                        <?php echo $layanan['satuanPesanan'] ?>
+                                    </strong></p>
+                                <p>Harga: <strong>
+                                        <?php echo $layanan['hargaLayanan'] ?>
+                                    </strong></p>
+                            </div>
+                            <a href="./processHapusLayanan.php?indexLayanan=<?php echo $index; ?>"
+                                class="btn btn-danger">Hapus</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <?php endforeach; ?>
         
     </main>
     <script src="./assets/js/bootstrap.min.js"></script>

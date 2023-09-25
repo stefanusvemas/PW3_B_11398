@@ -22,8 +22,8 @@ $detail = [
 <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title><?php echo $detail["page title"]; ?></title>
-    <link rel="icon" href="<?php echo $detail[" logo"]; ?>" type="image/x-icon" />
+    <title><?php echo $detail["page_title"]; ?></title>
+    <link rel="icon" href="<?php echo $detail["logo"]; ?>" type="image/x-icon" />
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css" />
 
     <!-- Poppins dari Google Fonts -->
